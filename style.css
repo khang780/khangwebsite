@@ -172,12 +172,13 @@ nav{
 
 .features {
   background-color: white;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px; /* Adds spacing between features */
   padding: 50px;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
 }
 
 .feature {
@@ -185,6 +186,8 @@ nav{
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 30%; /* Ensures consistent sizing */
+  min-width: 200px; /* Prevents features from getting too small */
 }
 
 .featureIcon {
@@ -233,7 +236,7 @@ nav{
   color: lightgray;
 }
 
-label {
+.label {
   font-size: 14px;
   font-weight: 300;
 }
@@ -358,7 +361,7 @@ label {
   color: black;
 }
 
-footer {
+.footer {
   display: flex;
 }
 
@@ -385,7 +388,6 @@ footer {
 }
 
 .footerRight {
-  flex: 1;
   padding: 50px;
   display: flex;
   flex-direction: column;

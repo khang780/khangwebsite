@@ -16,9 +16,7 @@
         <div class="productDetails">
             <h1 class="productTitle">Khang shirt</h1>
             <h2 class="productPrice">$199</h2>
-            <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda
-                dolorum
-                doloremque sapiente aliquid aperiam.</p>
+            <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda dolorum doloremque sapiente aliquid aperiam.</p>
             <div class="colors">
                 <div class="color"></div>
                 <div class="color"></div>
@@ -53,30 +51,36 @@
             <span class="close">X</span>
         </div>
     </div>
+
     <div class="features">
         <div class="feature">
             <img class="featureIcon" src="./img/shipping.png" alt="">
             <span class="featureTitle">FREE SHIPPING</span>
-            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+            <span class="featureDesc">Free domestic shipping in Laos on all orders. Worldwide shipping available with additional fees.</span>
         </div>
         <div class="feature">
             <img class="featureIcon" src="./img/return.png" alt="">
-            <span class="featureTitle">30 DAYS RETURN</span>
-            <span class="featureDesc">No question return and easy refund in 14 days.</span>
-        </div>
-        <div class="feature">
-            <img class="featureIcon" src="./img/gift.png" alt="">
-            <span class="featureTitle">GIFT CARDS</span>
-            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+            <span class="featureTitle">7 DAYS RETURN</span>
+            <span class="featureDesc">Returns accepted within 7 days for unused and undamaged items.</span>
         </div>
         <div class="feature">
             <img class="featureIcon" src="./img/contact.png" alt="">
             <span class="featureTitle">CONTACT US!</span>
             <span class="featureDesc">Keep in touch via email and support system.</span>
         </div>
-    <div>  
-        <footer></footer> <!-- The footer will be inserted here -->
+    </div>
 
-        <script src="loadContent.js"></script> <!-- This script will load the header and footer -->
+    <!-- Footer will be inserted here -->
+    <div id="footer-container"></div>
+
+    <script src="loadContent.js"></script>
+    <script>
+        // Load the footer content dynamically
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>

@@ -18,3 +18,18 @@ function loadHTML() {
 
 // Call the function to load content after the page loads
 window.onload = loadHTML;
+
+// loadContent.js
+
+// Function to load footer content from an external HTML file
+function loadFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+}
+
+// Load footer when the page is ready
+loadFooter();
