@@ -1,0 +1,27 @@
+.aboutUsSection {
+    display: flex; /* Creates a flex container */
+    align-items: center; /* Vertically centers content */
+    gap: 20px; /* Space between image and text */
+}
+
+.aboutUsImage {
+    width: 50%; /* Adjust width of the image */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+
+.aboutUsText {
+    width: 45%; /* Adjust width of the text container */
+}
+
+.aboutUsText h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.aboutUsText p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
