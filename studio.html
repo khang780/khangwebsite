@@ -7,15 +7,114 @@
     <link rel="stylesheet" href="style.css">
     <title>Publication - Khang</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+
+        .media-container {
+            display: flex;
+            justify-content: center; /* Centers items horizontally */
+            align-items: center; /* Aligns items vertically */
+            gap: 0; /* Space between items */
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .media-container img, .media-container video {
+            width: auto; /* Set consistent width for images and video */
+            height: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            object-fit: cover; /* Ensures the content scales proportionally */
+            border: none;
+        }
+
+        .media-container img {
+            flex: 1;
+            filter: grayscale(100%); /* Makes the image black and white */
+        }
+
+        .media-container video {
+            width: auto; /* Slightly larger width for video */
+            height: 400px;
+            flex: 2; /* Makes the video element take more space */
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 45%; /* Position the overlay at the center vertically */
+            left: 50%; /* Position the overlay at the center horizontally */
+            transform: translate(-50%, -50%); /* Offset the position to ensure perfect centering */
+            color: white; /* Text color */
+            font-size: 3rem; /* Adjust text size */
+            text-align: center;
+            z-index: 10; /* Ensures text is above images/video */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px; /* Adjust padding as needed */
+            width: 100%; /* Ensure the overlay stretches across the container */
+        }
+    </style>
+    
 </head>
 <body>
     <!-- Header will be loaded here -->
     <nav></nav>
 
-    <div class="publicationContent">
-        <h1>Our Latest Publications</h1>
-        <p>Explore the latest research and publications from our team.</p>
-        <!-- Publication content goes here -->
+    <div class="media-container">
+        <div class="text-overlay">
+            <p>Studio</p>
+        </div>
+        <img src="/studioMedia/Colorful Silk.JPG" alt="Image 1">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Silk Spinning.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="media-container">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Silk Drying.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="media-container">
+        <img src="/studioMedia/Complex Weaving.JPG" alt="Image 2">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Boiling.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="media-container">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Square Weaving.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="/studioMedia/Black Silk.JPG" alt="Image 1">
+    </div>
+
+    <div class="media-container">
+        <img src="/studioMedia/Basket with Many Silk.JPG" alt="Image 2">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Complex Silk Weaving.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="media-container">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Weaving Red Silk.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <img src="/studioMedia/Silk Basket.JPG" alt="Image 1">
+    </div>
+
+    <div class="media-container">
+        <video autoplay loop muted>
+            <source src="/studioMedia/Windy Silk.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     </div>
 
     <!-- Footer will be loaded here -->
