@@ -1,0 +1,36 @@
+/* Mobile-specific styles (max-width: 480px) */
+@media (max-width: 480px) {
+    .media-container {
+        flex-direction: column; /* Stack the images and videos vertically */
+        height: auto; /* Let the height adjust based on the content */
+    }
+
+    .media-container img, .media-container video {
+        width: 100%; /* Set width to 100% for images and videos */
+        height: auto; /* Let the height adjust proportionally */
+        object-fit: cover;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 70%;  /* Change this value to move the text lower or higher */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* Optional: Reduce the size of the images/videos if needed */
+    .media-container video {
+        height: 200px; /* Adjust video height for smaller screens */
+    }
+
+    .media-container img {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
+}
