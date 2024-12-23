@@ -1,36 +1,37 @@
 /* Mobile-specific styles (max-width: 480px) */
 @media (max-width: 480px) {
     .media-container {
+        display: flex;
         flex-direction: column; /* Stack the images and videos vertically */
+        align-items: center; /* Center the content horizontally */
         height: auto; /* Let the height adjust based on the content */
+        position: relative; /* Required for absolute positioning of overlay */
+        margin: 0; /* Remove any default margin */
+        width: 100%; /* Ensure full width for the container */
     }
 
     .media-container img, .media-container video {
-        width: 100%; /* Set width to 100% for images and videos */
+        width: 100%; /* Make media take the full width of the container */
         height: auto; /* Let the height adjust proportionally */
-        object-fit: cover;
+        object-fit: cover; /* Ensures the content scales proportionally */
     }
 
     .text-overlay {
         position: absolute;
-        top: 70%;  /* Change this value to move the text lower or higher */
+        top: 25%;  /* Center text vertically */
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); /* Center the overlay */
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
         text-align: center;
         z-index: 10;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark background for readability */
+        padding: 10px 15px; /* Adjust padding for better readability */
+        width: 100%; /* Ensure the overlay stretches across the entire width */
     }
 
     /* Optional: Reduce the size of the images/videos if needed */
-    .media-container video {
-        height: 200px; /* Adjust video height for smaller screens */
-    }
-
-    .media-container img {
-        height: 200px; /* Adjust image height for smaller screens */
+    .media-container video, .media-container img {
+        max-height: 280px; /* Limit max height for both images and videos */
     }
 }
