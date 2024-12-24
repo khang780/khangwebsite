@@ -599,3 +599,34 @@ nav{
     padding: 20px;
   }
 }
+
+
+/*product*/
+
+.product {
+  cursor: pointer; 
+  margin-bottom: 2rem;
+}
+
+.product img {
+  transition: 0.3s all;
+}
+
+.product:hover img { 
+  opacity: 0.7;
+}
+
+.product .buy-btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-weight: 600;
+  transform: translateY(20px); /* Fixed typo here */
+  opacity: 0; 
+  transition: 0.3s all;
+}
+
+.product:hover .buy-btn { /* Fixed typo in the selector */
+  transform: translateY(0);
+  opacity: 1;
+}
