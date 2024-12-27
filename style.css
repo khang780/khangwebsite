@@ -52,6 +52,131 @@ nav{
     border-radius: 10px;
 }
 
+/* Initially, the collapse section is hidden */
+.collapse {
+  display: none;  /* Hide the collapse section */
+}
+
+.collapse.show {
+  display: block;  /* Show the collapse section when the "show" class is added */
+}
+
+/* Optional: Adding smooth transitions to the collapse section */
+.collapse {
+  transition: all 0.3s ease;
+}
+
+/* section styling */
+ 
+/* ------- Navigation Menu ---------- */
+.navbar{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-brand{
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  align-self: center;
+  font-size: 32px;
+}
+
+.collapse{
+  align-self: center;
+}
+
+.nav-link{
+  font-size: 18px;
+  margin: 12px;
+  color: var(--dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:hover{
+  color: var(--primary-color);
+}
+
+.toggle-button{
+  font-size: 21px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  position: absolute;
+  right: 0;
+  margin: 8px 10px;
+  display: none;
+}
+
+.toggle-button:hover {
+  color:#790953; 
+}
+
+.toggle-button:focus{
+  outline: none;
+}
+
+@media (max-width : 992px){
+  .navBottom{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width : 700px){
+  .navTop {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+  }
+
+  .search{
+    display: none;
+  }
+
+  .limitedOffer{
+    display: none;
+  }
+}
+
+@media (max-width : 574px){
+
+  .toggle-button{
+      display: initial;
+  }
+
+  .collapse{
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.8s cubic-bezier(0.51,-0.15, 0, 0.98);
+  }
+
+    /* Initially, the collapse section is hidden */
+  .collapse {
+    display: none;  /* Hide the collapse section */
+  }
+
+  .collapse.show {
+    display: block;  /* Show the collapse section when the "show" class is added */
+  }
+
+  /* Optional: Adding smooth transitions to the collapse section */
+  .collapse {
+    transition: all 0.3s ease;
+  }
+  
+  .collapse .menuItem {
+    display: block;  /* Ensures the menu items are stacked vertically */
+    text-align: center;  /* Centers the text inside the menu items */
+  }
+
+  .collapse-toggle{
+      max-height: 500px;
+  }
+}
+
+
 .menuItem{
     margin-right: 50px;
     cursor: pointer; 
@@ -59,21 +184,25 @@ nav{
     font-weight: 300;
 }
 
+.menuItem:hover {
+  color: #790953; /* Change the color on hover */
+}
+
 .menuItem a {
   text-decoration: none;
   color: inherit; /* This keeps the link color same as the h3 text */
 }
-
 
 .slider {
   background-color: black;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   overflow: hidden;
 }
-
+/*----changed----*/
 .sliderWrapper {
   display: flex;
   width: 500vw;
+  height: 50vw;
   transition: all 1.5s ease-in-out;
 }
 
@@ -107,18 +236,6 @@ nav{
   z-index: 1;
 }
 
-.sliderPrice {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  font-size: 60px;
-  font-weight: 300;
-  text-align: center;
-  color: white;
-  border: 1px solid gray;
-  z-index: 1;
-}
-
 .buyButton {
   position: absolute;
   top: 70%;
@@ -135,39 +252,6 @@ nav{
 .buyButton:hover {
   background-color: white;
   color: black;
-}
-
-
-.sliderItem:nth-child(1) .sliderBg {
-  background-color: transparent;
-}
-.sliderItem:nth-child(2) .sliderBg {
-  background-color: pink;
-}
-.sliderItem:nth-child(3) .sliderBg {
-  background-color: teal;
-}
-.sliderItem:nth-child(4) .sliderBg {
-  background-color: cornflowerblue;
-}
-.sliderItem:nth-child(5) .sliderBg {
-  background-color: purple;
-}
-
-.sliderItem:nth-child(1) .sliderPrice {
-  color: #369e62;
-}
-.sliderItem:nth-child(2) .sliderPrice {
-  color: white;
-}
-.sliderItem:nth-child(3) .sliderPrice {
-  color: teal;
-}
-.sliderItem:nth-child(4) .sliderPrice {
-  color: cornflowerblue;
-}
-.sliderItem:nth-child(5) .sliderPrice {
-  color: cornsilk;
 }
 
 #new .one {
@@ -467,9 +551,9 @@ nav{
 }
 
 .footerRight {
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
+  padding: 80px;
+  display: flex
+  flex-direction; 
   justify-content: space-between;
 }
 
@@ -488,9 +572,11 @@ nav{
 }
 
 .fIcon{
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .copyright{
@@ -498,25 +584,7 @@ nav{
   font-size: 14px;
 }
 
-@media screen and (max-width:480px) {
-  nav{
-    padding: 20px;
-  }
-
-  .search{
-    display: none;
-  }
-
-  .navBottom{
-    flex-wrap: wrap;
-  }
-
-  .menuItem{
-    margin: 20px;
-    font-weight: 700;
-    font-size: 20px;
-  }
-
+@media screen and (max-width:640px) {
   .slider{
     clip-path: none;
   }
@@ -531,7 +599,8 @@ nav{
   }
 
   .sliderTitle{
-    display: none;
+    position: absolute;
+    font-size: 28px;
   }
 
   .sliderPrice{
@@ -542,13 +611,25 @@ nav{
   }
 
   .buyButton{
-    right: 0;
-    top: 0;
+    display: none;
   }
 
   .features{
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+    margin-top: -50px; /* Adjust this value to control how much it overlaps */
+    padding-top: 80px;
+    padding-left: 10px;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 50px;
   }
+  
+  .feature {
+    width: 110%; /* Ensures consistent sizing */
+    min-width: 200px; /* Prevents features from getting too small */
+  }
+  
 
   .product{
     clip-path: none ;
@@ -577,21 +658,44 @@ nav{
     margin: 0;
   }
 
-  footer{
-    flex-direction: column;
-    align-items: center;
+  footer {
+    display: center;
   }
 
-  .footerLeft{
-    padding: 20px;
-    width: 90%;
+  .footerLeft {
+    display: none; /* Hide the left part of the footer */
   }
 
-  .footerRight{
-    padding: 20px;
+  .footerRight {
+    display: block; /* Show only the right part of the footer */
+    background-color: transparent; /* Make the background transparent */
+    padding-left: 100px;
     width: 90%;
+    text-align: center;
     align-items: center;
-    background-color: whitesmoke;
+    justify-content: center; /* Center content horizontally */
+    display: flex; /* Ensure flexbox layout for centering */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .footerRight .fIcons {
+    margin-top: 20px;
+  }
+
+  .footerRight .fIcon {
+    margin: 0 10px; /* Space out the icons horizontally */
+  }
+  
+  .footerRight .copyright {
+    display: block; /* Show copyright */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footerRight .fMenuTitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .payment{
@@ -599,7 +703,6 @@ nav{
     padding: 20px;
   }
 }
-
 
 /*product*/
 
