@@ -193,6 +193,13 @@ nav{
   color: inherit; /* This keeps the link color same as the h3 text */
 }
 
+.aboutUsText p:first-of-type {
+  font-weight: bold;
+  font-size: 18px; /* Highlight the first paragraph (title) */
+  color: black; /* Use a unique color for emphasis */
+  margin-bottom: 20px;
+}
+
 .slider {
   background-color: black;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
